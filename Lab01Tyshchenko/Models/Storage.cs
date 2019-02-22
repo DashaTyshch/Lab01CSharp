@@ -6,7 +6,7 @@ namespace Lab01Tyshchenko.Models
     {
         public event Action<Info> InfoChanged;
 
-        public Info Info { get; set; }
+        public Info Info { get; private set; }
 
         public void ChangeInfo(Info info)
         {

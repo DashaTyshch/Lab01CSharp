@@ -8,14 +8,14 @@ namespace Lab01Tyshchenko.ViewModels
 {
     class FirstViewModel : INotifyPropertyChanged
     {
-        public FirstModel m_model { get; private set; }
+        public FirstModel FModel { get; private set; }
 
         private DateTime _date;
         private ICommand _dateCommand;
 
         public FirstViewModel(Storage storage)
         {
-            m_model = new FirstModel(storage);
+            FModel = new FirstModel(storage);
             _date = DateTime.Today.Date;
         }
 
@@ -51,7 +51,7 @@ namespace Lab01Tyshchenko.ViewModels
 
         private void DateExecute(object obj)
         {
-            m_model.CheckDate(Date);
+            FModel.CheckDate(Date);
         }
 
         private bool DateCanExecute(object obj)

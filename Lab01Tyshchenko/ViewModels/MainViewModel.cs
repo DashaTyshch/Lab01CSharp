@@ -8,7 +8,7 @@ namespace Lab01Tyshchenko.ViewModels
 {
     class MainViewModel : INotifyPropertyChanged
     {
-        public MainModel m_model { get; private set; }
+        public MainModel MModel { get; private set; }
 
         private int _age;
         private string _westernZodiac;
@@ -19,8 +19,8 @@ namespace Lab01Tyshchenko.ViewModels
 
         public MainViewModel(Storage storage)
         {
-            m_model = new MainModel(storage);
-            m_model.UIInfoChanged += UIOnDateChanged;
+            MModel = new MainModel(storage);
+            MModel.UIInfoChanged += UIOnDateChanged;
         }
 
         private void UIOnDateChanged(Info info)
@@ -100,7 +100,7 @@ namespace Lab01Tyshchenko.ViewModels
         }
         private void BackExecute(object obj)
         {
-            m_model.ShowFirstWindow();
+            MModel.ShowFirstWindow();
         }
 
         private bool BackCanExecute(object obj)
