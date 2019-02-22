@@ -2,7 +2,6 @@
 using Lab01Tyshchenko.Tools;
 using System;
 using System.ComponentModel;
-using System.Windows;
 using System.Windows.Input;
 
 namespace Lab01Tyshchenko.ViewModels
