@@ -18,10 +18,10 @@
             </Style.Triggers>
         </Style>
     </UserControl.Resources>
-    
-    <Grid Background="Wheat">
+
+    <Grid Background="DimGray">
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock HorizontalAlignment="Center" Text="Ведіть дату свого народження:" FontSize="18"/>
+            <TextBlock Foreground="WhiteSmoke" HorizontalAlignment="Center" Text="Ведіть дату свого народження:" FontSize="20"/>
             <DatePicker Width="150" Name="datePicker" SelectedDate="{Binding Date}" Margin="0 8 0 30"/>
             <Button Content="Підтвердити" Width="150" Command="{Binding DateCommand}" Style="{StaticResource ButtonStyle}"/>
         </StackPanel>

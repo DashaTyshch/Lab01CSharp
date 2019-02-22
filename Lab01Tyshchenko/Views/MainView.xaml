@@ -18,16 +18,33 @@
         </Style>
         <Style TargetType="TextBlock">
             <Setter Property="HorizontalAlignment" Value="Center"/>
-            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Foreground" Value="WhiteSmoke"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="18"/>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="18"/>
         </Style>
     </UserControl.Resources>
-    <Grid Background="Wheat">
+    <Grid Background="DimGray">
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Text="{Binding Age, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
-            <TextBlock Text="З днем народження!" Visibility="{Binding BirthdayVisib}"/>
-            <TextBlock Text="{Binding WesternZodiac, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
-            <TextBlock Text="{Binding ChineseZodiac, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
-            <Button Content="Назад" Width="150" Command="{Binding BackCommand}" Style="{StaticResource ButtonStyle}"/>
+
+            <StackPanel Orientation="Horizontal">
+                <Label >Ваш вік:</Label>
+                <TextBlock Text="{Binding Age, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label >Ваш зодіак за західною системою: </Label>
+                <TextBlock Text="{Binding WesternZodiac, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label >Ваш зодіак за китайською системою:</Label>
+                <TextBlock Text="{Binding ChineseZodiac, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+            </StackPanel>
+
+            <TextBlock Text="З днем народження!" Margin="0 20" Visibility="{Binding BirthdayVisib}" FontSize="21" Foreground="DarkOrange"/>
+
+            <Button Content="Назад" Width="150" Margin="0 20" Command="{Binding BackCommand}" Style="{StaticResource ButtonStyle}"/>
         </StackPanel>
             
     </Grid>
